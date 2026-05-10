@@ -1,3 +1,19 @@
+import kson
+import os
+
+MEMORY_FILE = "memory.json"
+
+# load Memory if it exists
+if os.path.exists(MEMORY_FILE):
+	with open(MEMORY_FILE, "r") as f:
+		memory = json.load(f)
+else: 
+	memory = {}
+
+print("Chatbot: I'm back. I remember thing now.")
+
+while True:
+	user = input("You: ").lower()
 print("Chatbot: I'm back. I remember nothing... yet.")
 
 name = None
